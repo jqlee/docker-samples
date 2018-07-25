@@ -4,3 +4,4 @@ facenet-demo/data/*.*
 
 *.rdb
 sample04/data/*.*
+sample04/data/redis/dump.rdb
