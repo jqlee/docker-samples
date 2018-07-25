@@ -14,11 +14,11 @@ def hello_world():
 from flask import jsonify
 @app.route('/json')
 def json():
-	obj = {
-		'name': 'Docker',
-		'version': 13.12
-	}
-	return jsonify(obj)
+    obj = {
+        'name': 'Docker',
+        'version': 13.12
+    }
+    return jsonify(obj)
 
 
 if __name__ == '__main__':

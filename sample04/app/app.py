@@ -30,22 +30,10 @@ for m in controllers: # (x[0:-3] for x in os.listdir("controllers") if x.endswit
 # */
 
 
-# /* --
-import imp
-import os
-ctl_path = 'models'
 
-controllers = [file for file in os.listdir(ctl_path) if file.endswith(".py")]
-for m in controllers: # (x[0:-3] for x in os.listdir("controllers") if x.endswith(".py")):
-    path = os.path.join(ctl_path,m)
-    name = m[0:-3]
-    
-    #print('name: ', name)
-    print('load model: ', name)
-    fp, pathname, description = imp.find_module(name , [ctl_path])
-    mod = imp.load_module(name, fp, pathname, description)
+import redis
+app.POOL = redis.ConnectionPool(host='redis', port=6379, db=0, decode_responses=True)
 
-# */
 
 
 if __name__ == '__main__':

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		ul.items {
+			padding: 0;
+			width: 80%;
+			box-shadow: 0 0 10px 1px #ccc;
+		}
+
+		ul.items li {
+		    display: flex;
+			justify-content: space-between;
+		    padding: 0.5em;
+		}
+
+		ul.items li:hover {
+			background-color: #ccc;
+		}
+
+	</style>
+
+</head>
+<body>
+	<h1>SHOP &raquo; Index</h1>
+
+	<div>
+		<h3>create new</h3>
+		<form action="{{ url_for('shop.add_product') }}" method="post">
+			<input type="text" name="name" placeholder="product's name" value="法語入門F1">
+			<input type="text" name="price" placeholder="product's price" value="5000">
+			<button>Save</button>
+		</form>
+	</div>
+
+
+	<ul class="items">
+	{% for product in products %}
+		<li>
+			<div>
+				<form action="{{ url_for('shop.del_product', id=product.id) }}" method="post">
+					<button>delete</button>
+				</form>
+			</div>
+			<div>{{ product.name }}</a></div>
+			<div>{{ product.price }}</div>
+		</li>
+	{% endfor %}
+	<div style="text-align: right;">total: {{ products|length }} item(s)</div>
+	</ul>
+
+</body>
+</html>

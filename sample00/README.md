@@ -22,9 +22,15 @@ CMD test.py
 
 
 
-搭配 Dockerfile 
+# 搭配 Dockerfile 
+
+建立影像
   
 	docker build . -t sample00
-  
+
+執行
+
 	docker run -it sample00
+
+
 
