@@ -15,10 +15,10 @@ run 是一個整合命令，包含建置影像與執行容器
 Dockerfile
 封裝docker指令，用於製作docker image
 
-FROM python:3.6
-COPY test.py /
-ENTRYPOINT python
-CMD test.py
+> FROM python:3.6
+> COPY test.py /
+> ENTRYPOINT python
+> CMD test.py
 
 
 

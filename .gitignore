@@ -2,3 +2,5 @@ __pycache__/
 facenet-demo/data/
 facenet-demo/data/*.*
 
+*.rdb
+sample04/data/*.*
