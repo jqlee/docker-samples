@@ -1,0 +1,29 @@
+version: '3'
+services:
+
+  app:
+    build: .
+    ports:
+      - 5999:5000
+    volumes:
+      - ./app:/app
+    networks:
+      - docker-net
+
+    working_dir: '/app'
+    entrypoint: python
+    command: [
+        "app.py"
+    ]    
+    
+  redis:
+    image: redis:alpine
+    networks:
+      - docker-net
+    volumes:
+      - ./data/redis:/data
+    restart: unless-stopped
+
+
+networks:
+  docker-net:
