@@ -1,0 +1,22 @@
+# docker swarm init
+# docker stack deploy -c docker-compose.yml getstartedlab
+version: '3'
+services:
+
+  app:
+    build: .
+    container_name: f_recog
+    stdin_open: true
+    tty: true
+    entrypoint: python
+
+    command: [
+        "download.py",
+        "--model=20180402-114759",
+        "--data_path=/data/"
+    ]
+   
+    volumes:
+      - ./data:/data
+      - ./samples:/data/samples
+      - ./app:/app
