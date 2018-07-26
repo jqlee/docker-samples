@@ -11,10 +11,12 @@ sample04 - work with redis
 
 複製範例程式到本機
 
-使用GitHub Desktop 
+使用 [GitHub Desktop](https://desktop.github.com/)
 
 	File > Clone Repository > URL: https://github.com/jqlee/docker_samples.git
 
-或者在命令模式執行 
+或者以shell執行以下指令
 
 	git clone https://github.com/jqlee/docker_samples.git
+
+ (Windows 系統需要安裝 [Git for Windows](https://gitforwindows.org/))
