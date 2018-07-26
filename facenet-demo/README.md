@@ -1,16 +1,8 @@
-一、複製範例程式到本機
+一、請先clone到本機
 
-使用GitHub Desktop 
+二、開啟shell程式
 
-	File > Clone Repository > URL: https://github.com/jqlee/docker_samples.git
-
-或者在命令模式執行 
-
-	git clone https://github.com/jqlee/docker_samples.git
-
-二、安裝
-	
-GitHub Desktop
+使用 GitHub Desktop 
 
 	Repository > Open In PowerShell/Terminal
 
@@ -18,10 +10,12 @@ GitHub Desktop
 
 	cd facenet-demo
 
-安裝
+三、安裝
 
 	docker-compose -f install.yml up
+	
+安裝程式會下載 pretrained model 並解壓縮到 data 資料夾。僅需要執行一次。
 
-三、 執行
+四、執行
 
 	docker-compose up
